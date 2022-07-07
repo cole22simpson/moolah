@@ -45,7 +45,7 @@
     }
   ],
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "./index.html",
   "description": "An app that allows you to keep track of all of your transactions while travelling.",
   "background_color": "#434d54",
   "theme_color": "#ffffff"
