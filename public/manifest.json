@@ -1,7 +1,6 @@
 {
-  "name": "Moolah",
-  "short_name": "Moolah",
-  "orientation": "portrait",
+  "name": "SmartSpendr",
+  "short_name": "SmartSpendr",
   "icons": [
     {
       "src": "/icons/icon-72x72.png",
@@ -44,9 +43,8 @@
       "type": "image/png"
     }
   ],
-  "display": "standalone",
-  "start_url": "./index.html",
-  "description": "An app that allows you to keep track of all of your transactions while travelling.",
+  "theme_color": "#ffffff",
   "background_color": "#434d54",
-  "theme_color": "#ffffff"
+  "start_url": "/",
+  "display": "standalone"
 }
