@@ -13,7 +13,7 @@ request.onsuccess = function(event) {
   db = event.target.result;
 
   if (navigator.onLine) {
-    uploadTransaction();
+    uploadBudget();
   }
 };
 
@@ -63,4 +63,4 @@ function uploadBudget() {
   };
 }
 
-window.addEventListener('online', uploadTransaction)
+window.addEventListener('online', uploadBudget)
