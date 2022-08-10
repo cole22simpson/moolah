@@ -24,6 +24,6 @@ mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/moolah', {
 // routes
 app.use(require("./routes/api.js"));
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
 });
