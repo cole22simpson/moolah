@@ -32,7 +32,7 @@ function saveRecord(record) {
 function uploadBudget() {
   const transaction = db.transaction(['new_trans'], 'readwrite');
 
-  const budgetObjectStore = transaction.objectStore('moolah');
+  const budgetObjectStore = transaction.objectStore('new_trans');
 
   const getAll = budgetObjectStore.getAll();
 
