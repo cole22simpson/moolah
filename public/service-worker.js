@@ -15,10 +15,9 @@ const FILES_TO_CACHE = [
   "./icons/icon-512x512.png"
 ];
 
-const APP_PREFIX = 'SmartSpendr-';     
+const APP_PREFIX = 'moolah-';     
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION
-const DATA_CACHE_NAME = "data-cache-" + VERSION;
 
 self.addEventListener("install", function(event) {
   event.waitUntil(
@@ -29,7 +28,6 @@ self.addEventListener("install", function(event) {
   );
 });
 
-// Respond with cached resources
 self.addEventListener("fetch", function(event) {
   if (event.request.url.includes("/api/")) {
     event.respondWith(
