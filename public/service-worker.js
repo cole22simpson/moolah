@@ -1,5 +1,8 @@
+const APP_PREFIX = 'moolah-';     
+const VERSION = 'version_01';
+const CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
-  "./",
+  "/",
   "./index.html",
   "./css/styles.css",
   "./js/idb.js",
@@ -14,10 +17,6 @@ const FILES_TO_CACHE = [
   "./icons/icon-384x384.png",
   "./icons/icon-512x512.png"
 ];
-
-const APP_PREFIX = 'moolah-';     
-const VERSION = 'version_01';
-const CACHE_NAME = APP_PREFIX + VERSION
 
 // Respond with cached resources
 self.addEventListener('fetch', function (e) {
