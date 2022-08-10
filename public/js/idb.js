@@ -6,7 +6,7 @@ const request = indexedDB.open('moolah', 1)
 request.onupgradeneeded = function(event) {
   const db = event.target.result;
 
-  db.createObjectStore('moolah', { autoIncrement: true });
+  db.createObjectStore('new_trans', { autoIncrement: true });
 };
 
 request.onsuccess = function(event) {
@@ -22,19 +22,19 @@ request.onerror = function(event) {
 }
 
 function saveRecord(record) {
-  const transaction = db.transaction(['moolah'], 'readwrite');
+  const transaction = db.transaction(['new_trans'], 'readwrite');
 
-  const moolahObjectStore = transaction.objectStore('moolah');
+  const budgetObjectStore = transaction.objectStore('new_trans');
 
-  moolahObjectStore.add(record);
+  budgetObjectStore.add(record);
 }
 
-function uploadTransaction() {
-  const transaction = db.transaction(['moolah'], 'readwrite');
+function uploadBudget() {
+  const transaction = db.transaction(['new_trans'], 'readwrite');
 
-  const moolahObjectStore = transaction.objectStore('moolah');
+  const budgetObjectStore = transaction.objectStore('moolah');
 
-  const getAll = moolahObjectStore.getAll();
+  const getAll = budgetObjectStore.getAll();
 
   getAll.onsuccess = function() {
     if (getAll.result.length > 0) {
@@ -52,11 +52,9 @@ function uploadTransaction() {
           throw new Error(serverResponse);
         }
 
-        const transaction = db.transaction(['moolah'], 'readwrite');
-        const moolahObjectStore = transaction.objectStore('moolah');
-        moolahObjectStore.clear();
-
-        alert('All saved transactions have been submitted!');
+        const transaction = db.transaction(['new_trans'], 'readwrite');
+        const budgetObjectStore = transaction.objectStore('new_trans');
+        budgetObjectStore.clear();
       })
       .catch(err => {
         console.log(err);
