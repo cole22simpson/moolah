@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(MONGODB_URI || 'mongod://localhost:27017/moolah', {
+mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/moolah', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
@@ -24,6 +24,6 @@ mongoose.connect(MONGODB_URI || 'mongod://localhost:27017/moolah', {
 // routes
 app.use(require("./routes/api.js"));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`App running on port ${PORT}!`);
 });
