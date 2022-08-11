@@ -6,6 +6,7 @@
   ## Description
 
   This application will let you keep track of your expenses when travelling!
+  Visit [here](https://immense-citadel-09977.herokuapp.com/)
 
   ## Usage
 
