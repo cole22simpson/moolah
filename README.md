@@ -2,6 +2,9 @@
   # Moolah
 
   [![Badge](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
+  
+  ![image](https://user-images.githubusercontent.com/97649732/184245881-22d9ed6c-e75b-45d9-8d97-90aa802d8974.png)
+
 
   ## Description
 
